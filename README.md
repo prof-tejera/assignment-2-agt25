@@ -1,3 +1,6 @@
+# [Assignment 2: Functional Timers](https://main.d1zmk1b84wj84m.amplifyapp.com/timers)
+
+
 # Objective
 In this assignment, we will start using the foundation we lay in A1 and make our timers fully functional. Each timer will function as described in A1 and the user flow should be the following:
 
@@ -22,18 +25,6 @@ In this assignment, we will start using the foundation we lay in A1 and make our
 - Update documentation as your components change. 
 - Your application must be deployed and the link pasted somewhere in this README
 
-### Deployment Instructions (GH actions)
-
-- Go to `Settings`
-- Go to `Pages`
-- in `Source`, select `gh-pages` branch
-- Click Save
-- In `package.json`, add a new key/value as: `"homepage": "https://prof-tejera.github.io/<repo>"`
-
-Once the `build-deploy` action finishes running, the app should be live
-at `https://prof-tejera.github.io/<repo>`
-
-For other ways to deploy see https://github.com/prof-tejera/react-deployment-code
 
 ## Grading Rubric 
 - All components you have added are functional components
