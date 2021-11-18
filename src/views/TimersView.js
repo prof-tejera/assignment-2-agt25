@@ -11,7 +11,6 @@ import Tabata from "../components/timers/Tabata";
 // Vector
 import HeartRate from "../images/grey-heart-rate.svg";
 
-
 const Container = styled.div`
   display: flex;
   flex-direction: row;

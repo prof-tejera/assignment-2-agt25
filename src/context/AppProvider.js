@@ -1,7 +1,12 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { InputContext } from './InputProvider';
 import { timeInSeconds, alertCountUp, alertCountDown } from '../utils/helpers';
+
+// Sound and visual effects 
 import confetti from "canvas-confetti"; 
+import useSound from 'use-sound';
+import roundChangeSound from '../sounds/round-change.wav';
+import congratsSound from "../sounds/congrats.wav";
 
 
 export const AppContext = React.createContext({});
@@ -50,6 +55,9 @@ const AppProvider = ({ children }) => {
   const [currAction, setCurrAction ] = useState("Run"); 
 
 
+  const [playNewRound] = useSound(roundChangeSound);
+  const [playCongratsSound] = useSound(congratsSound);
+
   /****************************
    * TIMER METHODS BEGIN HERE
    ***************************/
@@ -96,6 +104,7 @@ const AppProvider = ({ children }) => {
             if (timerType === "XY") {
               // Handle XY interval loop 
               if (currRound < targetRounds) {
+                playNewRound();
                 setCurrRound(currRound + 1); 
                 setCurrHours(runHours);
                 setCurrMins(runMins); 
@@ -114,6 +123,7 @@ const AppProvider = ({ children }) => {
                 setCurrSecs(restSecs);
               } else if (currAction === "Rest") {
                   if (currRound < targetRounds) {
+                    playNewRound();
                     setCurrRound(currRound + 1);
                     setCurrAction("Run"); 
                     setCurrHours(runHours);
@@ -143,7 +153,7 @@ const AppProvider = ({ children }) => {
     },
     [ currAction, currHours, currMins, currSecs, currRound, targetRounds,   
      runHours, runMins, runSecs, restHours, restMins, restSecs, 
-     isTimerEnd, isTimerPaused, timerType, isTimerEnding ],
+     isTimerEnd, isTimerPaused, timerType, isTimerEnding, playNewRound ],
   );
 
 
@@ -211,6 +221,7 @@ const AppProvider = ({ children }) => {
       particleCount: 150,
       spread: 60
     });
+    playCongratsSound();
   };
 
 
