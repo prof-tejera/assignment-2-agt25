@@ -1,4 +1,4 @@
-# [Assignment 2: Functional Timers](https://main.d1zmk1b84wj84m.amplifyapp.com/timers)
+# [Assignment 2: Functional Timers](https://main.d2i2lla75z6mqo.amplifyapp.com/timers)
 
 
 # Notes
