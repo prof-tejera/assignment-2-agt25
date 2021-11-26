@@ -1,3 +1,42 @@
+# [Assignment 2: Functional Timers](https://main.d2i2lla75z6mqo.amplifyapp.com/timers)
+
+
+# Notes
+On the feedback for Assignment 1, you mentioned that Tabata and XY didn't have a round or rest input field. 
+- You also stated that my timer was missing a way to show the current action like "run" or "rest". 
+
+I've included screenshots, of my updated timer, to clear any confusion. You'll find that my Assignment 1 phases are the exact same. 
+
+Is it possibly to go back and check the assignment 1 link? I replied to the Github comments, didn't receive an update, so I was confused as to what you were referring to, and what I had to change precisely on this update. Perhaps you forgot to play around with the fields and add a number to each? 
+
+The screenshots below should clear up any confusion. 
+For XY, I have: 1) a run input phase, and 2) a round input phase. 
+- You can't get to the round input phase without entering a number on the run input phase. 
+For Tabata, I have: 1) a run input phase, 2) a round input phase, and 3) a rest input phase. 
+- The same procedure follows. 
+- Each phase isn't enabled until you click "Next". 
+  - The button, also, isn't enabled unless you enter a value for each input phase. 
+
+## Run Phase (as seen on Assignment 1)
+<img width="397" alt="run" src="https://user-images.githubusercontent.com/57548500/142510627-0a5cd291-c601-4a59-a74a-2cf0adbe1bab.png">
+
+## Rounds Phase
+<img width="415" alt="rounds" src="https://user-images.githubusercontent.com/57548500/142510692-49a83676-a769-4964-9cce-8ce0bf2035bd.png">
+
+
+## Rest Phase
+<img width="414" alt="rest" src="https://user-images.githubusercontent.com/57548500/142510722-6882ff46-e01e-4e15-b33b-eb67d5c384f1.png">
+ 
+ 
+### PS, I also had the helper run/rest icons set up for assignment 1, along with the "Run" or "Rest" alert below the current time. The timer wasn't functional then, but they were there. 
+
+<img width="94" alt="Screen Shot 2021-11-18 at 5 57 11 PM" src="https://user-images.githubusercontent.com/57548500/142510860-4589df89-11c7-4dc4-a4f9-56cf6cab2ac2.png">
+
+<img width="433" alt="icon-helper-text" src="https://user-images.githubusercontent.com/57548500/142510964-02a3490b-5139-4357-831c-6c17051a0394.png">
+
+
+
+
 # Objective
 In this assignment, we will start using the foundation we lay in A1 and make our timers fully functional. Each timer will function as described in A1 and the user flow should be the following:
 
@@ -20,20 +59,8 @@ In this assignment, we will start using the foundation we lay in A1 and make our
 - Application state should be managed with context. That is, timers should NOT track time, rounds, etc, locally or pass it down to its children
 - Make sure that you can switch between timers without breaking the app (e.g. I should not have to refresh in order to run another timer after a run has been completed)
 - Update documentation as your components change. 
-- Your application must be deployed and the link pasted somewhere in this README
+- Your application must be deployed and the link pasted somewhere in this README -> [Assignment 2: Functional Timers](https://main.d2i2lla75z6mqo.amplifyapp.com/timers)
 
-### Deployment Instructions (GH actions)
-
-- Go to `Settings`
-- Go to `Pages`
-- in `Source`, select `gh-pages` branch
-- Click Save
-- In `package.json`, add a new key/value as: `"homepage": "https://prof-tejera.github.io/<repo>"`
-
-Once the `build-deploy` action finishes running, the app should be live
-at `https://prof-tejera.github.io/<repo>`
-
-For other ways to deploy see https://github.com/prof-tejera/react-deployment-code
 
 ## Grading Rubric 
 - All components you have added are functional components
